@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    {% block head %}{% endblock head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="Vinit" content="Innovation">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+
+   
+</head>
+{% load static %}
+<!-- body start -->
+
+<body id="section_1">
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-3 col-md-5 col-7">
+                    <p class="text-white mb-0">
+                        <i class="bi-clock site-header-icon me-2"></i>
+                        Mon-Fri 10:00-19:00
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-5">
+                    <p class="text-white mb-0">
+                        <i class="bi-telephone site-header-icon me-2"></i>
+                        0731-2456780
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-12 ms-auto">
+                    <ul class="social-icon">
+                        <li><a href="https://facebook.com" class="social-icon-link bi-facebook"></a></li>
+
+                        <li><a href="https://pinterest.com" class="social-icon-link bi-pinterest"></a></li>
+
+                        <li><a href="https://twitter.com" class="social-icon-link bi-twitter"></a></li>
+
+                        <li><a href="https://www.youtube.com" class="social-icon-link bi-youtube"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+
+            <a href="#" class="navbar-brand">Innovation <span class="text-danger">WithUs</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'contact' %}"><small class="small-title"><strong
+                                    class="text-warning"></strong></small> Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'contact' %}"><small class="small-title"><strong
+                                    class="text-warning"></strong></small> About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'contact' %}"><small class="small-title"><strong
+                                    class="text-warning"></strong></small> Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'contact' %}"><small class="small-title"><strong
+                                    class="text-warning"></strong></small> Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'contact' %}"><small class="small-title"><strong
+                                    class="text-warning"></strong></small> Contact</a>
+                    </li>
+                    {% if  not user.is_authenticated %}
+                                        <li>
+                                            <a class="custom-btn btn click-scroll" href="{% url 'login' %}">Log in / Register </a>
+                                        </li>
+                                        {% endif %}
+                                        {% if user.is_authenticated %}
+                                        <!-- <li> -->
+                                            <li class="nav-item">
+                                               
+                                                    Hello, {{request.user}}
+                                                <a class="custom-btn btn click-scroll" href="{% url 'logout' %}">Logout </a>
+                                              </li>
+                                              
+                                            
+                                        {% endif %}
+                    {% comment %} <li class="nav-item">
+                                    <a class="custom-btn btn click-scroll" href="{% url 'login' %}">Log in / Register </a>
+                    </li> {% endcomment %}
+
+                </ul>
+                <div>
+
+                </div>
+    </nav>
+
+
+
+
+    {% block body %}{% endblock body %}
+
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                    <div class="site-footer-wrap d-flex align-items-center">
+                        <p class="copyright-text mb-0 me-4">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Veritatis, quas?
+                        </p>
+
+                        <ul class="social-icon">
+                            <li><a href="https://facebook.com" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="https://pinterest.com" class="social-icon-link bi-pinterest"></a></li>
+
+                            <li><a href="https://twitter.com" class="social-icon-link bi-twitter"></a></li>
+
+                            <li><a href="https://www.youtube.com" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <p class="copyright-text mb-0 me-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae
+                        quidem deleniti debitis inventore facere id natus fugit, veritatis placeat eum! </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+   
+ 
+</body>
+
+      <!-- JAVASCRIPT FILES -->
+      <script src="{% static 'js/jquery.min.js ' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js ' %}"></script>
+      <script src="{% static 'js/jquery.sticky.js ' %}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js ' %}"></script>
+      <script src="{% static 'js/magnific-popup-options.js ' %}"></script>
+      <script src="{% static 'js/click-scroll.js ' %}"></script>
+      <script src="{% static 'js/custom.js ' %}"></script>
+
+</html>

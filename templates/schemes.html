@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+
+{% block title %}Learning{% endblock title %}
+
+ {% load static %}
+
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <style>
+        
+        #row {
+            background-color: rgb(151, 35, 128);
+        }
+
+        #grey {
+            background-color: rgb(247, 244, 244);
+        }
+
+        h3 {
+            color: black;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        #colforsearch {
+            margin-left: 5px;
+
+        }
+    </style>
+    {% endblock head %}
+
+    <!-- body start -->
+   
+   {% block body %}
+   <section class="hero section-hero section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12 text-center mx-auto">
+                <div class="section-hero-text">
+                    <small class="small-title text-warning">Government of India provide various schemes for enterpreneur</small>
+
+                    <h1 class="text-white">Government schemes for Entrepreneurs</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <div class="row">
+        <div class="col-md-3 w3-margin-left w3-auto  w3-animate-left w3-margin-top" id="colforsearch">
+            <form id="search-form">
+                <div class="input-group item-search">
+                    <input type="text" class="form-control input-item w-25" id='myFilter' name='item'
+                        placeholder="Search for products,brands and more" onkeyup="myFunction()" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="text-center" id="grey">
+        <h3 class="text-black font-weight-light w3-animate-left mt-2 px-2 py-2 ml-4"><strong>When it comes to Micro,
+                Small, and Medium
+                Enterprises (MSMEs) and startups, then the Govt of India is very clear: They need to be nurtured,
+                protected, and encouraged for India’s betterment.</strong></h3>
+    </div>
+
+    <h3 class=" font-weight-bold w3-animate-zoom w3-hover-blue mt-2 px-2 py-2 ml-4"><strong>Top Government Schemes For
+            Startups, which can help them
+            trigger growth, and more business</strong></h3>
+    <div class="row">
+        <div class="col md-3 px-3 py-3 ">
+            <div class="card ml-4" style="width: auto;">
+                <div class="card-body w3-animate-right ">
+                    <h4
+                        class="card-title w3-text-deep-orange font-weight-bold w3-bold w3-hover-text-green w3-text w3-bordered w3-animate-left w3-border-amber">
+                        Pradhan Mantri Mudra Yojana</h4>
+                    <p class="card-text font-weight-light">PM Modi launched Pradhan Mantri Mudra Yojana, wherein Micro
+                        Units Development and Refinance Agency Bank or MUDRA Banks provide loans at low rates to
+                        micro-finance institutions and non-banking financial institutions, who in turn provide
+                        low-interest loans to startups....<a href="#" class="fa-link w3-text-blue"> READ More</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col md-3 px-3 py-3">
+            <div class="card ml-2" style="width: auto;">
+                <div class="card-body w3-animate-bottom">
+                    <h4
+                        class="card-title w3-text-green font-weight-bold w3-bold w3-hover-text-yellow w3-text w3-animate-top">
+                        Design Clinic for Design Expertise to MSMEs</h4>
+                    <p class="card-text font-weight-light">Design Clinic for Design Expertise to MSMEs
+                        Design and innovation are critical for any sector, and every startup and should have a
+                        design-centric approach to solve the problems of their niche. In order to encourage and inspire
+                        small businesses to experiment and try out new designs for their products...<a href="#"
+                            class="fa-link w3-text-blue"> READ More</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col md-3 px-3 py-3">
+            <div class="card ml-2" style="width: auto;">
+                <div class="card-body w3-animate-top">
+                    <h4
+                        class="card-title  w3-text-brown font-weight-bold w3-bold w3-hover-text-blue w3-text w3-animate-bottom">
+                        Financial Support to MSMEs in ZED Certification Scheme</h4>
+                    <p class="card-text font-weight-light">Focussed on existing and new manufacturing units, ZED or Zero
+                        Defect and Zero Effect mission is to encourage manufacturers to create better products, with
+                        high quality and zero defects. The focus is to enable manufacturers to embrace world-class
+                        manufacturing processes,...<a href="#" class="fa-link w3-text-blue"> READ More</a></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col md-3 px-3 py-3">
+            <div class="card ml-2" style="width: auto;">
+                <div class="card-body w3-animate-left w3-animate-fading">
+                    <h4
+                        class="card-title w3-text-blue font-weight-bold w3-bold w3-hover-text-red w3-text w3-animate-right">
+                        Credit Linked Capital Subsidy for Technology Upgradation (CLCSS)</h4>
+                    <p class="card-text font-weight-light">Govt is clearly aware that technology is the tool that can
+                        propel Indian startups and MSMEs to compete with global competitors. This is the reason for the
+                        creation of the Credit Linked Capital Subsidy for Technology Upgradation (CLCSS) Government
+                        scheme, wherein Govt provides... <a href="#" class="fa-link w3-text-blue"> READ More</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class=" font-weight-bold w3-animate-opacity w3-hover-blue mt-2 px-2 py-2 ml-4 w3-animate-input">Other Schemes
+    </h2>
+
+    <div class="row" id="myItems">
+        <div class="col-md-3 px-3 py-3" id="product-list">
+            <div class="card ml-lg-4" style="width: auto;">
+                <a href="https://www.msmex.in/learn/how-to-apply-for-pmegp/">
+                    <img width="269" src="https://www.msmex.in/learn/wp-content/uploads/2022/07/07_SEO_1.jpg"></a>
+                <div class="card-body w3-animate-bottom ">
+                    <h4 class="card-title text-capitalize font-weight-bold">How to Apply for Prime Minister’s Employment
+                        Generation
+                        Programme (PMEGP)
+                    </h4>
+                    <p class="card-text font">In the 21st century, developing countries like India are facing various
+                        problems. Unemployment has been a significant problem in India, where the population is growing
+                        at a tremendous and uncontrollable rate.It is one of the rising problems which is pulling down
+                        the economic growth and development in the country...<a
+                            href="https://www.msmex.in/learn/how-to-apply-for-pmegp/" class="fa-link w3-text-blue"> READ
+                            More</a>
+                    </p>
+                    <!--             <table>
+                        <tr><i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 20px;">4 week</td>
+                        </tr>
+                        <tr style="font-size: 2-px; font-weight: 600;">14 modules</tr>
+                    </table> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 px-3 py-3" id="product-list">
+            <div class="card ml-lg-4" style="width: auto;">
+                <a href="https://www.msmex.in/learn/important-schemes-for-women-entrepreneurs/"><img width="269px"
+                        src="https://www.msmex.in/learn/wp-content/uploads/2022/03/03_SEO1-1.jpg"></a>
+                <div class="card-body w3-animate-bottom ">
+                    <h4 class="card-title font-weight-bold text-capitalize">Important MSME Schemes For Empowering Women
+                        Entrepreneurs
+                    </h4>
+                    <p class="card-text">In today’s economic environment, gender equality has become a must. Women from
+                        various classes and societal backgrounds are now welcomed with open arms in the MSME sector,
+                        which once overflowed with businessmen. In India, the introduction of several government
+                        incentives for women entrepreneurs has prompted more women to step forward.<a
+                            href="https://www.msmex.in/learn/important-schemes-for-women-entrepreneurs/"
+                            class="fa-link w3-text-blue"> READ More</a></p>
+                    <!--             <table>
+                        <tr><i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 15px;">8 week</td>
+                        </tr>
+                        <tr style="font-size: 15px; font-weight: 600;">24 modules</tr>
+                    </table> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 px-3 py-3" id="product-list">
+            <div class="card ml-lg-4" style="width: auto;">
+                <a href="https://www.msmex.in/learn/what-is-msme-cluster-development-initiative/"><img width="269px"
+                        src="https://www.msmex.in/learn/wp-content/uploads/2021/10/what-is-msme-cluster-development.jpeg"></a>
+                <div class="card-body w3-animate-bottom">
+                    <h4 class="card-title font-weight-bold">What Is MSME Cluster Development? Programme Initiatives,
+                        Objectives And How
+                        To Apply?
+                    </h4>
+                    <p class="card-text w3-animate-bottom">It has been announced that the SIDBI (Small Industries
+                        Development Bank of
+                        India) has launched significant MSME cluster development initiatives for the welfare of MSMEs.
+                        At present, the SIDBI is planning to consider about 100 clusters. At the same time, it’s even
+                        concentrating on forming 15 more clusters for future development of MSMEs.
+                        <a href="https://www.msmex.in/learn/what-is-msme-cluster-development-initiative/"
+                            class="fa-link w3-text-blue"> READ More</a>
+                    </p>
+                    <!--             <table>
+                        <tr><i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 15px;">6 week</td>
+                        </tr>
+                        <tr style="font-size: 15px; font-weight: 600;">10 modules</tr>
+                    </table> -->
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock body %}
+<script>
+    function myFunction() {
+        var input, filter, cards, cardContainer, h4, title, i;
+        input = document.getElementById("myFilter");
+        filter = input.value.toUpperCase();
+        cardContainer = document.getElementById("myItems");
+        cards = cardContainer.getElementsByClassName("card");
+        for (i = 0; i < cards.length; i++) {
+            title = cards[i].querySelector(".card-body h4.card-title");
+            if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</html>
